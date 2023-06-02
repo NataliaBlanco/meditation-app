@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+.app {
+  height: 100vh;
+  background-position: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Geologica', sans-serif; }
+  .app__time-select, .app__sound-picker, .app__player-container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    flex: 1; }
+  .app__vid-container__clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1; }
+  .app__time-select {
+    background-color: transparent; }
+  .app__player-container {
+    background-color: transparent;
+    position: relative; }
+    .app__player-container .moving-outline,
+    .app__player-container .track-outline {
+      position: absolute;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      pointer-events: none; }
+    .app__player-container .time-display {
+      position: absolute;
+      bottom: 10%;
+      font-size: 50px;
+      color: white; }
+  .app__time-select .button {
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.5s ease; }
+  .app__sound-picker .btn {
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.5s ease;
+    height: 130px;
+    width: 130px;
+    padding: 20px; }
+    .app__sound-picker .btn .img {
+      height: 50%; }
+
+/*# sourceMappingURL=main.css.map */

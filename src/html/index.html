@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meditation App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Roboto&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="icon" href="./assets/images/favicon.png" />
+</head>
+
+<body>
+  <Div class="app">
+    <div class="app__vid-container">
+      <video loop class="app__vid-container__clip">
+        <source src="./assets/videos/beach.mp4" type="video/mp4" class="vid-container__src__video">
+
+      </video>
+    </div>
+    <div class="app__time-select">
+      <button data-time="120" class="button">2 Minutes</button>
+      <button data-time="300" class="button">5 Minutes</button>
+      <button data-time="480" class="button">8 Minutes</button>
+    </div>
+    <div class="app__player-container">
+      <audio class="player-container__song">
+        <source src="./assets/sounds/rain.mp3">
+      </audio>
+      <img src="./assets/images/play.svg" class="play">
+      <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
+      </svg>
+      <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
+      </svg>
+      <img src="./assets/images/replay.svg" class="replay">
+      <h3 class="time-display">0:00</h3>
+    </div>
+    <Div class="app__sound-picker">
+      <button data-sound="./assets/sounds/rain.mp3" data-video="./assets/videos/rain_video.mp4" class="btn"><img
+          src="./assets/images/rain.svg" alt="rain" class="img"></button>
+      <button data-sound="./assets/sounds/beach.mp3" data-video="./assets/videos/rain_video.mp4" class="btn"><img
+          src="./assets/images/beach.svg" alt="beach" class="img"></button>
+    </Div>
+  </Div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
