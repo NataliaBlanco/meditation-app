@@ -15,36 +15,36 @@
 <body>
   <Div class="app">
     <div class="app__vid-container">
-      <video loop class="app__vid-container__clip">
+      <video loop class="app__vid-container__clip js-video">
         <source src="./assets/videos/beach.mp4" type="video/mp4" class="vid-container__src__video">
-
       </video>
     </div>
     <div class="app__time-select">
-      <button data-time="120" class="button">2 Minutes</button>
-      <button data-time="300" class="button">5 Minutes</button>
-      <button data-time="480" class="button">8 Minutes</button>
+      <button data-time="120" class="button js-time_select_button">2 Minutes</button>
+      <button data-time="300" class="button js-time_select_button">5 Minutes</button>
+      <button data-time=" 480" class="button js-time_select_button">8 Minutes</button>
     </div>
     <div class="app__player-container">
-      <audio class="player-container__song">
-        <source src="./assets/sounds/rain.mp3">
+      <audio class="player-container__song js-song">
+        <source src="./assets/sounds/beach.mp3">
       </audio>
-      <img src="./assets/images/play.svg" class="play">
-      <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
-      </svg>
+      <img src="./assets/images/play.svg" class="play  js-play">
       <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
       </svg>
-      <img src="./assets/images/replay.svg" class="replay">
-      <h3 class="time-display">0:00</h3>
+      <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" class="js-outline" />
+      </svg>
+      <img src="./assets/images/replay.svg" class="replay js-replay">
+      <h3 class="time-display js-timer">0:00</h3>
     </div>
     <Div class="app__sound-picker">
-      <button data-sound="./assets/sounds/rain.mp3" data-video="./assets/videos/rain_video.mp4" class="btn"><img
-          src="./assets/images/rain.svg" alt="rain" class="img"></button>
-      <button data-sound="./assets/sounds/beach.mp3" data-video="./assets/videos/rain_video.mp4" class="btn"><img
+      <button data-sound="./assets/sounds/rain.mp3" data-video="./assets/videos/rain_video.mp4"
+        class="btn js-snd-btn"><img src="./assets/images/rain.svg" alt="rain" class="img">
+      </button>
+      <button data-sound="./assets/sounds/beach.mp3" data-video="./assets/videos/beach.mp4" class="btn js-snd-btn"><img
           src="./assets/images/beach.svg" alt="beach" class="img"></button>
     </Div>
   </Div>

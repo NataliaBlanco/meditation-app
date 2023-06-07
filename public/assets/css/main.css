@@ -7,61 +7,146 @@
   height: 100vh;
   background-position: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-family: 'Geologica', sans-serif; }
-  .app__time-select, .app__sound-picker, .app__player-container {
-    height: 80%;
+  @media all and (min-width: 768px) {
+    .app {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center; } }
+  .app__vid-container__clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    -o-filter: blur(5px);
+    filter: blur(5px); }
+  .app__time-select {
+    width: 90%;
+    display: flex;
+    flex: 0.8;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent; }
+    @media all and (min-width: 768px) {
+      .app__time-select {
+        width: 80%;
+        height: 80%;
+        flex-direction: column;
+        flex: 1; } }
+    .app__time-select .button {
+      color: white;
+      min-height: 50px;
+      min-width: -moz-fit-content;
+      min-width: fit-content;
+      padding: 0 2px 0 2px;
+      height: 10%;
+      width: 30%;
+      background: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 5px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.5s ease; }
+      @media all and (min-width: 768px) {
+        .app__time-select .button {
+          font-size: 20px; } }
+    .app__time-select :hover {
+      background-color: rgba(255, 255, 255, 0.6); }
+  .app__player-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background-color: transparent;
-    flex: 1; }
-  .app__vid-container__clip {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1; }
-  .app__time-select {
-    background-color: transparent; }
-  .app__player-container {
-    background-color: transparent;
+    flex: 1.2;
     position: relative; }
+    @media all and (min-width: 768px) {
+      .app__player-container {
+        height: 80%;
+        flex: 1; } }
     .app__player-container .moving-outline,
     .app__player-container .track-outline {
       position: absolute;
-      height: 50%;
-      top: 50%;
+      height: 80%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-90deg);
       pointer-events: none; }
+      @media all and (min-width: 768px) {
+        .app__player-container .moving-outline,
+        .app__player-container .track-outline {
+          height: 45%;
+          top: 50%; } }
+      @media all and (min-width: 1100px) {
+        .app__player-container .moving-outline,
+        .app__player-container .track-outline {
+          height: 55%; } }
+    .app__player-container .play {
+      position: absolute;
+      bottom: 50%;
+      height: 90px; }
+      @media all and (min-width: 768px) {
+        .app__player-container .play {
+          height: 100px;
+          position: absolute;
+          bottom: 45%; } }
+    .app__player-container .transparent {
+      color: black; }
+    .app__player-container .replay {
+      position: absolute;
+      bottom: 34%; }
+      @media all and (min-width: 768px) {
+        .app__player-container .replay {
+          height: 25px;
+          bottom: 31%; } }
+      @media all and (min-width: 1100px) {
+        .app__player-container .replay {
+          bottom: 28%; } }
     .app__player-container .time-display {
       position: absolute;
-      bottom: 10%;
-      font-size: 50px;
+      bottom: 5%;
+      font-size: 30px;
       color: white; }
-  .app__time-select .button {
-    color: white;
-    width: 30%;
-    height: 10%;
-    background: none;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 5px solid rgba(255, 255, 255, 0.6);
-    transition: all 0.5s ease; }
-  .app__sound-picker .btn {
-    background: transparent;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 5px solid rgba(255, 255, 255, 0.6);
-    transition: all 0.5s ease;
-    height: 130px;
-    width: 130px;
-    padding: 20px; }
-    .app__sound-picker .btn .img {
-      height: 50%; }
+      @media all and (min-width: 768px) {
+        .app__player-container .time-display {
+          font-size: 50px; } }
+  .app__sound-picker {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    flex: 0.5; }
+    @media all and (min-width: 768px) {
+      .app__sound-picker {
+        height: 80%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex: 1; } }
+    .app__sound-picker .btn {
+      background: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 5px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.5s ease;
+      height: 110px;
+      width: 110px;
+      padding: 20px; }
+      @media all and (min-width: 768px) {
+        .app__sound-picker .btn {
+          height: 130px;
+          width: 130px; } }
+      .app__sound-picker .btn .img {
+        height: 50%; }
+      .app__sound-picker .btn :hover {
+        background-color: transparent; }
+    .app__sound-picker :hover {
+      background-color: rgba(255, 255, 255, 0.6); }
 
 /*# sourceMappingURL=main.css.map */

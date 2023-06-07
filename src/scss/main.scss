@@ -8,77 +8,162 @@
   height: 100vh;
   background-position: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-family: 'Geologica', sans-serif;
-  &__time-select,
-  &__sound-picker,
-  &__player-container {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color: transparent;
-    flex: 1;
   }
+
   &__vid-container {
     &__clip {
       position: absolute;
       right: 0;
       bottom: 0;
       z-index: -1;
+      -o-filter: blur(5px);
+      filter: blur(5px);
     }
   }
   &__time-select {
+    width: 90%;
+    display: flex;
+    flex: 0.8;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: transparent;
-  }
-  &__player-container {
-    background-color: transparent;
-    position: relative;
-    .moving-outline,
-    .track-outline {
-      position: absolute;
-      height: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg);
-      pointer-events: none;
+    @media all and (min-width: 768px) {
+      width: 80%;
+      height: 80%;
+      flex-direction: column;
+      flex: 1;
     }
-    .time-display {
-      position: absolute;
-      bottom: 10%;
-      font-size: 50px;
-      color: white;
-    }
-  }
-  &__time-select {
     .button {
       color: white;
-      width: 30%;
+      min-height: 50px;
+      min-width: fit-content;
+      padding: 0 2px 0 2px;
       height: 10%;
+      width: 30%;
       background: none;
-      font-size: 20px;
+      font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
       border: 5px solid rgba(#ffffff, 0.6);
       transition: all 0.5s ease;
+
+      @media all and (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    :hover {
+      background-color: rgba(#ffffff, 0.6);
+    }
+  }
+
+  &__player-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    flex: 1.2;
+    position: relative;
+    @media all and (min-width: 768px) {
+      height: 80%;
+      flex: 1;
+    }
+    .moving-outline,
+    .track-outline {
+      position: absolute;
+      height: 80%;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      pointer-events: none;
+      @media all and (min-width: 768px) {
+        height: 45%;
+        top: 50%;
+      }
+      @media all and (min-width: 1100px) {
+        height: 55%;
+      }
+    }
+    .play {
+      position: absolute;
+      bottom: 50%;
+      height: 90px;
+      @media all and (min-width: 768px) {
+        height: 100px;
+        position: absolute;
+        bottom: 45%;
+      }
+    }
+    .transparent {
+      color: black;
+    }
+    .replay {
+      position: absolute;
+      bottom: 34%;
+      @media all and (min-width: 768px) {
+        height: 25px;
+        bottom: 31%;
+      }
+      @media all and (min-width: 1100px) {
+        bottom: 28%;
+      }
+    }
+    .time-display {
+      position: absolute;
+      bottom: 5%;
+      font-size: 30px;
+      color: white;
+      @media all and (min-width: 768px) {
+        font-size: 50px;
+      }
     }
   }
   &__sound-picker {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    flex: 0.5;
+    @media all and (min-width: 768px) {
+      height: 80%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      flex: 1;
+    }
     .btn {
       background: transparent;
       border-radius: 50%;
       cursor: pointer;
       border: 5px solid rgba(#ffffff, 0.6);
       transition: all 0.5s ease;
-      height: 130px;
-      width: 130px;
+      height: 110px;
+      width: 110px;
       padding: 20px;
+      @media all and (min-width: 768px) {
+        height: 130px;
+        width: 130px;
+      }
       .img {
         height: 50%;
       }
+      :hover {
+        background-color: transparent;
+      }
+    }
+    :hover {
+      background-color: rgba(#ffffff, 0.6);
     }
   }
 }
