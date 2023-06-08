@@ -26,12 +26,12 @@ function checkPlay(song) {
     song.play();
     video.play();
     play.src = './assets/images/pause.svg';
-    play.classList.add('transparent');
+  
   } else {
     song.pause();
     video.pause();
     play.src = './assets/images/play.svg';
-    play.classList.add('transparent');
+    
   }
 }
 
