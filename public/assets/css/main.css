@@ -4,23 +4,26 @@
   box-sizing: border-box; }
 
 .app {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'Geologica', sans-serif; }
+  font-family: 'Geologica', sans-serif;
+  overflow: hidden; }
   @media all and (min-width: 768px) {
     .app {
+      height: 100vh;
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center; } }
   .app__vid-container__clip {
-    position: absolute;
+    position: fixed;
+    left: 0;
     top: 0;
     right: 0;
+    bottom: 0;
     z-index: -1;
-    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%;
@@ -30,7 +33,7 @@
   .app__time-select {
     width: 90%;
     display: flex;
-    flex: 0.8;
+    flex: 0.7;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -84,19 +87,19 @@
       @media all and (min-width: 768px) {
         .app__player-container .moving-outline,
         .app__player-container .track-outline {
-          height: 45%;
+          height: 42%;
           top: 50%; } }
       @media all and (min-width: 1100px) {
         .app__player-container .moving-outline,
         .app__player-container .track-outline {
-          height: 55%; } }
+          height: 50%; } }
     .app__player-container .play {
       position: absolute;
-      bottom: 50%;
-      height: 90px; }
+      bottom: 55%;
+      height: 60px; }
       @media all and (min-width: 768px) {
         .app__player-container .play {
-          height: 100px;
+          height: 90px;
           position: absolute;
           bottom: 45%; } }
     .app__player-container .replay {
@@ -105,7 +108,7 @@
       @media all and (min-width: 768px) {
         .app__player-container .replay {
           height: 25px;
-          bottom: 31%; } }
+          bottom: 33%; } }
       @media all and (min-width: 1100px) {
         .app__player-container .replay {
           bottom: 28%; } }

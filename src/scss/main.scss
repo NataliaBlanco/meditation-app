@@ -5,13 +5,15 @@
 }
 
 .app {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-family: 'Geologica', sans-serif;
+  overflow: hidden;
   @media all and (min-width: 768px) {
+    height: 100vh;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -19,11 +21,12 @@
 
   &__vid-container {
     &__clip {
-      position: absolute;
+      position: fixed;
+      left: 0;
       top: 0;
       right: 0;
+      bottom: 0;
       z-index: -1;
-      width: 100%;
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -34,7 +37,7 @@
   &__time-select {
     width: 90%;
     display: flex;
-    flex: 0.8;
+    flex: 0.7;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -90,19 +93,19 @@
       transform: translate(-50%, -50%) rotate(-90deg);
       pointer-events: none;
       @media all and (min-width: 768px) {
-        height: 45%;
+        height: 42%;
         top: 50%;
       }
       @media all and (min-width: 1100px) {
-        height: 55%;
+        height: 50%;
       }
     }
     .play {
       position: absolute;
-      bottom: 50%;
-      height: 90px;
+      bottom: 55%;
+      height: 60px;
       @media all and (min-width: 768px) {
-        height: 100px;
+        height: 90px;
         position: absolute;
         bottom: 45%;
       }
@@ -113,7 +116,7 @@
       bottom: 34%;
       @media all and (min-width: 768px) {
         height: 25px;
-        bottom: 31%;
+        bottom: 33%;
       }
       @media all and (min-width: 1100px) {
         bottom: 28%;
@@ -162,7 +165,6 @@
       }
       :hover {
         background-color: transparent;
-
         color: grey;
       }
     }
