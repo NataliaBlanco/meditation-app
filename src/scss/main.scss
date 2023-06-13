@@ -107,9 +107,7 @@
         bottom: 45%;
       }
     }
-    .transparent {
-      color: black;
-    }
+
     .replay {
       position: absolute;
       bottom: 34%;
@@ -160,15 +158,17 @@
         width: 130px;
       }
       .img {
-        height: 50%;
+        color: white;
       }
-
       :hover {
         background-color: transparent;
+
+        color: grey;
       }
     }
     :hover {
       background-color: rgba(#ffffff, 0.7);
+      color: grey;
     }
   }
 }
